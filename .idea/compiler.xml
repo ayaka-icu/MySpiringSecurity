@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SpringSecurity-01-Start" />
+        <module name="SpringSecurity-02-Login" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SpringSecurity-01-Start" target="11" />
+      <module name="SpringSecurity-02-Login" target="11" />
+      <module name="SpringSecurity-02-Login-Token" target="11" />
+      <module name="SpringSecurity-TODO" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SpringSecurity-01-Start" options="-parameters" />
+      <module name="SpringSecurity-02-Login" options="-parameters" />
+      <module name="SpringSecurity-02-Login-Token" options="-parameters" />
+      <module name="SpringSecurity-TODO" options="-parameters" />
+    </option>
+  </component>
+</project>
