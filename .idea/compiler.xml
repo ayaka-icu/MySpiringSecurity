@@ -9,12 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringSecurity-01-Start" />
         <module name="SpringSecurity-02-Login" />
+        <module name="SpringSecurity-03-DataSource" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SpringSecurity-01-Start" target="11" />
       <module name="SpringSecurity-02-Login" target="11" />
       <module name="SpringSecurity-02-Login-Token" target="11" />
+      <module name="SpringSecurity-03-DataSource" target="11" />
       <module name="SpringSecurity-TODO" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -23,6 +25,7 @@
       <module name="SpringSecurity-01-Start" options="-parameters" />
       <module name="SpringSecurity-02-Login" options="-parameters" />
       <module name="SpringSecurity-02-Login-Token" options="-parameters" />
+      <module name="SpringSecurity-03-DataSource" options="-parameters" />
       <module name="SpringSecurity-TODO" options="-parameters" />
     </option>
   </component>

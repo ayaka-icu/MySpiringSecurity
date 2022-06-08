@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link href="../css/log.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="loginDiv" style="height: 350px">
+    <form id="form" action="/doLogin" method="post">
+        <h1 id="loginMsg">LOGIN IN</h1>
+
+        <div id="errorMsg" th:text="${session.SPRING_SECURITY_LAST_EXCEPTION}"></div>
+
+        <p>用户名:<input id="username" name="uname" type="text" value=""></p>
+        <p>密码:<input id="password" name="passwd" type="password" value=""></p>
+
+        <p>Remember:<input id="remember" name="remember" type="checkbox"></p>
+
+        <div id="subDiv">
+            <input type="submit" class="button" value="login up">
+            <input type="reset" class="button" value="reset">&nbsp;&nbsp;&nbsp;
+            <a href="register.html">没有账号？</a>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>

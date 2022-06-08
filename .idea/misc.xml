@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/SpringSecurity-01-Start/pom.xml" />
         <option value="$PROJECT_DIR$/SpringSecurity-02-Login-Token/pom.xml" />
         <option value="$PROJECT_DIR$/SpringSecurity-02-Login/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-03-DataSource/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,20 @@
+
+spring:
+  security:
+    user:
+      name: ganga
+      password: 123
+      roles: admin,super  # 用户权限设置
+  mvc:
+    view:
+      suffix: .html
+  #thymeleaf模板配置
+  thymeleaf:
+    cache: false                   # 这个开发配置为false，避免改了模板还要重启服务器
+    prefix: classpath:/templates/  #模板文件视图前缀，默认是classpath:/templates/，可不用配置
+    #suffix: .html                  #模板文件视图后缀，默认是.html，可不用配置
+    check-template-location: true  #检查模板位置，可不用配置
+    encoding: utf-8                #编码字符集，默认为utf-8，可不用配置
+    mode: HTML                     #模板的模式，默认为HTML，可不用配置
+    servlet:
+      content-type: text/html	   #模板的内容类型，默认为text/html，可不用配置

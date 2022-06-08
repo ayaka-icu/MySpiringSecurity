@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <!--获取认证⽤户名-->
+    <ul>
+        <li sec:authentication="principal.username"></li>
+        <li sec:authentication="principal.authorities"></li>
+        <li sec:authentication="principal.accountNonExpired">
+        </li>
+        <li sec:authentication="principal.accountNonLocked"></li>
+        <li sec:authentication="principal.credentialsNonExpired">
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

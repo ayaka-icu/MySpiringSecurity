@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/MySpringSecurity.iml" filepath="$PROJECT_DIR$/MySpringSecurity.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-01-Start/SpringSecurity-01-Start.iml" filepath="$PROJECT_DIR$/SpringSecurity-01-Start/SpringSecurity-01-Start.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-02-Login/SpringSecurity-02-Login.iml" filepath="$PROJECT_DIR$/SpringSecurity-02-Login/SpringSecurity-02-Login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-03-DataSource/SpringSecurity-03-DataSource.iml" filepath="$PROJECT_DIR$/SpringSecurity-03-DataSource/SpringSecurity-03-DataSource.iml" />
     </modules>
   </component>
 </project>
