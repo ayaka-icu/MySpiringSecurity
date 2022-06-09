@@ -1,15 +1,45 @@
 package com.ganga.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.authentication.ForwardAuthenticationFailureHandler;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.security.web.util.matcher.OrRequestMatcher;
 
+/**
+ * SpringSecurity 核心管理配置类
+ *
+ *  重写
+ *  @Override
+ *  protected void configure(HttpSecurity http) throws Exception
+ *  自定义认证规则
+ *
+ *  重写
+ *  @Override
+ *  public void configure(AuthenticationManagerBuilder builder) throws Exception
+ *  自定义AuthenticationManager
+ *  builder.userDetailsService(userDetailsService) 设置自定义数据源
+ *
+ *
+ */
 @Configuration
 public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 
+
+    /**
+     * 自定义认证规则
+     * @param http
+     * @throws Exception
+     */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
@@ -49,6 +79,100 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .and()
                 .csrf().disable() //TODO: 这里关闭了跨域问题 以后学
                 ;
-
     }
+
+
+    /*
+    自定义数据源
+     */
+
+    //注入自定义的 UserDetailsService 自定义数据源信息
+    private final MyUserDetailsService myUserDetailsService;
+    @Autowired
+    public WebSecurityConfigurer(MyUserDetailsService myUserDetailsService){
+        this.myUserDetailsService = myUserDetailsService;
+    }
+
+
+    //自定义AuthenticationManager 推荐
+    @Override
+    public void configure(AuthenticationManagerBuilder builder) throws Exception {
+        //自定义一个 UserDetailsService 放入AuthenticationManagerBuilder中
+        builder.userDetailsService(myUserDetailsService); //传入自定义的UserDetailsService对象
+    }
+
+
+    //覆写authenticationManagerBean() 方法  @Bean注入到容器中即可
+    //直接调用覆盖 不需要调父类里的此方法即可   但是要加个@Bean注解
+    @Override
+    @Bean //此外, 还要@Bean注入到 Spring容器当中
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+
+
+
+//==========================下面是演示 所有情况 ==========================
+
+
+/*    *//**
+     * 方式一： 默认全局 AuthenticationManager
+     *      springboot 对 security 进行自动配置时自动在工厂中创建一个全局
+     * @param builder
+     *//*
+    @Autowired
+    public void initialize(AuthenticationManagerBuilder builder) throws Exception {
+        InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
+        userDetailsService.createUser(User.withUsername("aaa").password("{noop}123").roles("admin").build());
+        builder.userDetailsService(userDetailsService);
+        builder.userDetailsService(userDetailsService());
+        //循环依赖： Requested bean is currently in creation: Is there an unresolvable circular reference?
+        //此时，这个工厂中的配置 就显得多余了 直接@Bean 上一个 UserDetailsService
+    }
+
+    *//**
+     *
+     * @return
+     *//*
+    @Bean
+    public UserDetailsService userDetailsService(){
+        InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
+        userDetailsService.createUser(User.withUsername("bbb").password("{noop}123").roles("admin").build());
+        return userDetailsService;
+    }
+
+
+    *//**
+     * 注入自定义的 UserDetailsService 自定义数据源信息
+     *//*
+    private final MyUserDetailsService myUserDetailsService;
+    @Autowired
+    public WebSecurityConfigurer(MyUserDetailsService myUserDetailsService){
+        this.myUserDetailsService = myUserDetailsService;
+    }
+
+    *//**
+     * 方式二： 自定义AuthenticationManager 推荐
+     *      但是！并没有在工厂中暴露出来！只在工厂内部使用
+     * @param builder
+     *//*
+    @Override
+    public void configure(AuthenticationManagerBuilder builder) throws Exception {
+        //自定义一个 UserDetailsService 放入AuthenticationManagerBuilder中
+        builder.userDetailsService(myUserDetailsService); //传入自定义的UserDetailsService对象
+    }
+
+    *//**
+     * 覆写authenticationManagerBean() 方法  @Bean注入到容器中即可
+     * 作用：3用来将自定义的AuthenticationManager在工厂中进行暴露 可以在任何位置注入
+     * @return
+     * @throws Exception
+     *//*
+    @Override
+    @Bean //此外, 还要@Bean注入到 Spring容器当中
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }*/
+
+
 }

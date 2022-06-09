@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-01-Start/SpringSecurity-01-Start.iml" filepath="$PROJECT_DIR$/SpringSecurity-01-Start/SpringSecurity-01-Start.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-02-Login/SpringSecurity-02-Login.iml" filepath="$PROJECT_DIR$/SpringSecurity-02-Login/SpringSecurity-02-Login.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-03-DataSource/SpringSecurity-03-DataSource.iml" filepath="$PROJECT_DIR$/SpringSecurity-03-DataSource/SpringSecurity-03-DataSource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-04-TraditionalWeb/SpringSecurity-04-TraditionalWeb.iml" filepath="$PROJECT_DIR$/SpringSecurity-04-TraditionalWeb/SpringSecurity-04-TraditionalWeb.iml" />
     </modules>
   </component>
 </project>

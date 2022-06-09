@@ -5,9 +5,7 @@ spring:
 #      name: ganga
 #      password: 123
 #      roles: admin,super  # 用户权限设置
-  mvc:
-    view:
-      suffix: .html
+
   #thymeleaf模板配置
   thymeleaf:
     cache: false                   # 这个开发配置为false，避免改了模板还要重启服务器
