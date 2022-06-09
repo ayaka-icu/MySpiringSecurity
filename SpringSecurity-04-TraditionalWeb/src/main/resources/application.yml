@@ -4,7 +4,7 @@ spring:
 #    user:
 #      name: ganga
 #      password: 123
-#      roles: admin,super  # 用户权限设置
+#      roles: admin,super # 用户权限设置
 
   #thymeleaf模板配置
   thymeleaf:
