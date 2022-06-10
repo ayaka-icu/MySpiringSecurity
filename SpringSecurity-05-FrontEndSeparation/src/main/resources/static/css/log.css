@@ -56,12 +56,7 @@ p {
     color: #14ffc2; /*字体*/
     font-size: 22px;
 }
-#verify-p{
-    margin-top: 30px;
-    margin-left: 20px;
-    color: #14ffc2; /*字体*/
-    font-size: 22px;
-}
+
 
 #remember{
     margin-left: 15px;
@@ -95,27 +90,6 @@ p {
     color: #f0edf3;
     padding-left: 10px;
 }
-
-#verify{
-    width: 60px;
-    margin-left: 9px;
-    border-radius: 5px;
-    border-style: hidden;
-    height: 30px;
-    background-color: rgba(216, 191, 216, 0.5);
-    outline: none;
-    color: #f0edf3;
-    padding-left: 10px;
-}
-
-#verify-ico{
-    margin-left: 10px;
-    outline: none;
-    margin-top: -27px;
-    position: relative;
-    top: 19px;
-}
-
 .button {
     border-color: cornsilk;
     background-color: rgba(100, 149, 237, 0.85);

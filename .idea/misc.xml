@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/SpringSecurity-02-Login/pom.xml" />
         <option value="$PROJECT_DIR$/SpringSecurity-03-DataSource/pom.xml" />
         <option value="$PROJECT_DIR$/SpringSecurity-04-TraditionalWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-05-FrontEndSeparation/pom.xml" />
       </list>
     </option>
   </component>

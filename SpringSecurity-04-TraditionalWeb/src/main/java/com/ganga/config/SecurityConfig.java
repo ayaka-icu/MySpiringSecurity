@@ -1,5 +1,6 @@
 package com.ganga.config;
 
+import com.ganga.security.filter.VerifyCodeFilter;
 import com.ganga.service.MyUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -8,6 +9,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
  * Spring Security 相关配置
@@ -32,10 +34,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .loginPage("/login")
-                .loginProcessingUrl("/doLogin")
+            /*  .loginProcessingUrl("/doLogin")
                 .usernameParameter("uname")
                 .passwordParameter("passwd")
-                .defaultSuccessUrl("/index",true)
+                .defaultSuccessUrl("/index",true) //添加验证码时 自定义了这里就不用了 */
                 .failureUrl("/login")
                 .and()
                 .logout()
@@ -43,6 +45,30 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/imgs/cy.jpg")
                 .and()
                 .csrf().disable();
+
+        http.addFilterAt(verifyCodeFilter(), UsernamePasswordAuthenticationFilter.class);
+    }
+
+
+    @Bean
+    public VerifyCodeFilter verifyCodeFilter() throws Exception {
+        VerifyCodeFilter verifyCodeFilter = new VerifyCodeFilter();
+        verifyCodeFilter.setFilterProcessesUrl("/doLogin");
+        verifyCodeFilter.setUsernameParameter("uname");
+        verifyCodeFilter.setPasswordParameter("passwd");
+        //指定认证管理器
+        verifyCodeFilter.setAuthenticationManager(authenticationManagerBean());
+        //成功后的操作
+        verifyCodeFilter.setAuthenticationSuccessHandler((req,resp,authentication)->{
+            resp.sendRedirect("/index");
+        });
+        //失败后的操作
+        verifyCodeFilter.setAuthenticationFailureHandler((req,resp,exception)->{
+            resp.sendRedirect("/login");
+        });
+
+        //载入Bean
+        return verifyCodeFilter;
     }
 
 

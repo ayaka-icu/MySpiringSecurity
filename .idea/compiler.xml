@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringSecurity-02-Login" />
         <module name="SpringSecurity-03-DataSource" />
+        <module name="SpringSecurity-05-FrontEndSeparation" />
         <module name="SpringSecurity-01-Start" />
         <module name="SpringSecurity-04-TraditionalWeb" />
       </profile>
@@ -20,6 +21,7 @@
       <module name="SpringSecurity-03-DataSource" target="11" />
       <module name="SpringSecurity-03-DataSource (1)" target="11" />
       <module name="SpringSecurity-04-TraditionalWeb" target="11" />
+      <module name="SpringSecurity-05-FrontEndSeparation" target="11" />
       <module name="SpringSecurity-TODO" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -30,6 +32,7 @@
       <module name="SpringSecurity-02-Login-Token" options="-parameters" />
       <module name="SpringSecurity-03-DataSource" options="-parameters" />
       <module name="SpringSecurity-04-TraditionalWeb" options="-parameters" />
+      <module name="SpringSecurity-05-FrontEndSeparation" options="-parameters" />
       <module name="SpringSecurity-TODO" options="-parameters" />
     </option>
   </component>

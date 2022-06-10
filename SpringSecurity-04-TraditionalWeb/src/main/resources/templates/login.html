@@ -17,6 +17,11 @@
 
         <p>用户名:<input id="username" name="uname" type="text" value=""></p>
         <p>密码:<input id="password" name="passwd" type="password" value=""></p>
+        <p id="verify-p">验证码:
+            <input id="verify" name="kaptcha" type="text" value="">
+            <img id="verify-ico" alt="" th:src="@{/ico.jpg}">
+
+        </p>
 
         <p>Remember:<input id="remember" name="remember" type="checkbox"></p>
 

@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.ganga</groupId>
-    <artifactId>SpringSecurity-04-TraditionalWeb</artifactId>
+    <artifactId>SpringSecurity-05-FrontEndSeparation</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
@@ -51,14 +51,6 @@
             <version>3.5.1</version>
         </dependency>
 
-        <!-- google 验证码 -->
-        <dependency>
-            <groupId>com.github.penggle</groupId>
-            <artifactId>kaptcha</artifactId>
-            <version>2.3.2</version>
-        </dependency>
-
-        <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
