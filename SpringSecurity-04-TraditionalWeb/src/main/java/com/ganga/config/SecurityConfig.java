@@ -9,13 +9,27 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.web.authentication.RememberMeServices;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+import org.springframework.security.web.session.SessionInformationExpiredEvent;
+import org.springframework.security.web.session.SessionInformationExpiredStrategy;
+
+import javax.servlet.ServletException;
+import javax.sql.DataSource;
+import java.io.IOException;
+import java.util.UUID;
 
 /**
  * Spring Security 相关配置
  */
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private DataSource dataSource;
 
     /**
      * 配置 认证规则 和 自定义登录界面
@@ -40,11 +54,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .defaultSuccessUrl("/index",true) //添加验证码时 自定义了这里就不用了 */
                 .failureUrl("/login")
                 .and()
+                .rememberMe()
+                .rememberMeParameter(PersistentTokenBasedRememberMeServices.DEFAULT_PARAMETER)
+                .rememberMeServices(rememberMeServices())
+                .and()
                 .logout()
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/imgs/cy.jpg")
+                .logoutSuccessUrl("/login")
                 .and()
-                .csrf().disable();
+                .csrf().disable()
+                .sessionManagement() //开启会话管理
+                .maximumSessions(1) //最大统一用户 最大登录会话数量
+                //.expiredUrl("/login")
+                .expiredSessionStrategy(event -> {
+                    event.getResponse().sendRedirect("/login");
+                });
 
         http.addFilterAt(verifyCodeFilter(), UsernamePasswordAuthenticationFilter.class);
     }
@@ -56,6 +80,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         verifyCodeFilter.setFilterProcessesUrl("/doLogin");
         verifyCodeFilter.setUsernameParameter("uname");
         verifyCodeFilter.setPasswordParameter("passwd");
+        //开启renameMe
+        verifyCodeFilter.setRememberMeServices(rememberMeServices());
         //指定认证管理器
         verifyCodeFilter.setAuthenticationManager(authenticationManagerBean());
         //成功后的操作
@@ -69,6 +95,31 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         //载入Bean
         return verifyCodeFilter;
+    }
+
+
+    /**
+     * RememberMeServices 实现 注入bean
+     * @return
+     */
+    @Bean
+    public RememberMeServices rememberMeServices(){
+        PersistentTokenBasedRememberMeServices rememberMeServices = new PersistentTokenBasedRememberMeServices(
+                UUID.randomUUID().toString(),userDetailService,persistentTokenRepository()
+        );
+        return rememberMeServices;
+    }
+
+    /**
+     * 数据库持久化令牌
+     * @return
+     */
+    @Bean
+    public PersistentTokenRepository persistentTokenRepository(){
+        JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
+        jdbcTokenRepository.setDataSource(dataSource);
+        jdbcTokenRepository.setCreateTableOnStartup(false);
+        return jdbcTokenRepository;
     }
 
 

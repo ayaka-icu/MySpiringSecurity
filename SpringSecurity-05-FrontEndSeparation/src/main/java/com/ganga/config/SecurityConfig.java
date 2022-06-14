@@ -2,6 +2,7 @@ package com.ganga.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ganga.domin.User;
+import com.ganga.security.filter.LoginVerifyCodeFilter;
 import com.ganga.service.MyUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -32,6 +33,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
+                .mvcMatchers("/doLogin").permitAll()
+                .mvcMatchers("/ico.jpg").permitAll()
                 .anyRequest().authenticated() //前后端分离 请求都需要认证
                 .and()
                 .formLogin()
@@ -57,7 +60,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .csrf().disable();
 
-        http.addFilterAt(loginFilter(), UsernamePasswordAuthenticationFilter.class);
+        http.addFilterAt(loginVerifyCodeFilter(), UsernamePasswordAuthenticationFilter.class);
 
     }
 
@@ -67,34 +70,37 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      * @return
      */
     @Bean
-    public LoginFilter loginFilter() throws Exception {
-        LoginFilter loginFilter = new LoginFilter();
+    public LoginVerifyCodeFilter loginVerifyCodeFilter() throws Exception {
+        LoginVerifyCodeFilter loginFilter = new LoginVerifyCodeFilter();
+        //1.修改认证地址信息 或 参数信息
+        loginFilter.setFilterProcessesUrl("/doLogin");
         loginFilter.setUsernameParameter("username");
         loginFilter.setPasswordParameter("password");
-        loginFilter.setFilterProcessesUrl("/doLogin");
-        //使用自定义的AuthenticationManager
+        loginFilter.setVerifyCodeKey("verifyCode");
+        //2.设置认证管理器
         loginFilter.setAuthenticationManager(authenticationManagerBean());
-        //认证成功后 相应数据
+        //3.认证成功后的设置
         loginFilter.setAuthenticationSuccessHandler((req,resp,authentication)->{
             Map<String,Object> map = new HashMap<>();
-            map.put("msg","登录成功！");
+            map.put("msg","登陆成功");
             User user = (User) authentication.getPrincipal();
-            map.put("用户信息",user.getUsername());
-            resp.setContentType("application/json;charset=UTF-8");
+            map.put("用户信息", user.getUsername());
             resp.setStatus(HttpStatus.OK.value());
+            resp.setContentType("application/json;charset=UTF-8");
             String s = new ObjectMapper().writeValueAsString(map);
             resp.getWriter().write(s);
         });
-        //认证失败后 相应数据
+        //4.认证失败后的设置
         loginFilter.setAuthenticationFailureHandler((req,resp,exception)->{
             Map<String,Object> map = new HashMap<>();
-            map.put("msg","登录失败");
-            map.put("exception",exception.getMessage());
+            map.put("msg","登陆失败");
+            map.put("失败信息", exception.getMessage());
+            resp.setStatus(HttpStatus.UNAUTHORIZED.value());
             resp.setContentType("application/json;charset=UTF-8");
             String s = new ObjectMapper().writeValueAsString(map);
             resp.getWriter().write(s);
         });
-
+        //注入Bean
         return loginFilter;
     }
 

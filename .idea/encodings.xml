@@ -9,5 +9,13 @@
     <file url="file://$PROJECT_DIR$/SpringSecurity-04-TraditionalWeb/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringSecurity-05-FrontEndSeparation/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringSecurity-05-FrontEndSeparation/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-06-PasswordEncode/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-06-PasswordEncode/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-07-RememberMe/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-07-RememberMe/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-08-RememberMe-Separate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-08-RememberMe-Separate/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF-Attack/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF/src/main/java" charset="UTF-8" />
   </component>
 </project>

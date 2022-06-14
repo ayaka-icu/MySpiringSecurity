@@ -8,6 +8,12 @@
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-03-DataSource/SpringSecurity-03-DataSource.iml" filepath="$PROJECT_DIR$/SpringSecurity-03-DataSource/SpringSecurity-03-DataSource.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-04-TraditionalWeb/SpringSecurity-04-TraditionalWeb.iml" filepath="$PROJECT_DIR$/SpringSecurity-04-TraditionalWeb/SpringSecurity-04-TraditionalWeb.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-05-FrontEndSeparation/SpringSecurity-05-FrontEndSeparation.iml" filepath="$PROJECT_DIR$/SpringSecurity-05-FrontEndSeparation/SpringSecurity-05-FrontEndSeparation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-06-PasswordEncode/SpringSecurity-06-PasswordEncode.iml" filepath="$PROJECT_DIR$/SpringSecurity-06-PasswordEncode/SpringSecurity-06-PasswordEncode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-07-RememberMe/SpringSecurity-07-RememberMe.iml" filepath="$PROJECT_DIR$/SpringSecurity-07-RememberMe/SpringSecurity-07-RememberMe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-08-RememberMe-Separate/SpringSecurity-08-RememberMe-Separate.iml" filepath="$PROJECT_DIR$/SpringSecurity-08-RememberMe-Separate/SpringSecurity-08-RememberMe-Separate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-09-CSRF-Mock.iml" filepath="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-09-CSRF-Mock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF/SpringSecurity-CSRF.iml" filepath="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF/SpringSecurity-CSRF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF-Attack/SpringSecurity-CSRF-Attack.iml" filepath="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF-Attack/SpringSecurity-CSRF-Attack.iml" />
     </modules>
   </component>
 </project>

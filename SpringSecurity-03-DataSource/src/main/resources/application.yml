@@ -23,7 +23,9 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-
+      url: jdbc:mysql://119.23.48.182:3306/springsecurity?useSSH=false&characterEncoding=UTF-8
+      username: springsecurity
+      password: Me57nYf78aW7GHhS
 
 
 

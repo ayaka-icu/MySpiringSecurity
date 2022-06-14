@@ -9,6 +9,12 @@
         <option value="$PROJECT_DIR$/SpringSecurity-03-DataSource/pom.xml" />
         <option value="$PROJECT_DIR$/SpringSecurity-04-TraditionalWeb/pom.xml" />
         <option value="$PROJECT_DIR$/SpringSecurity-05-FrontEndSeparation/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSercurity-06-PasswordEncode/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-06-PasswordEncode/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-07-RememberMe/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-08-RememberMe-Separate/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF-Attack/pom.xml" />
       </list>
     </option>
   </component>

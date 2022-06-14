@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+  <meta charset="UTF-8">
+  <title>login</title>
+  <link href="../css/log.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="loginDiv" style="height: 350px">
+  <h2>欢迎：xxx ,您已成功登录系统！</h2><br>
+
+  <!--获取认证⽤户名-->
+  <ul>
+    <li sec:authentication="principal.username"></li>
+    <li sec:authentication="principal.authorities"></li>
+    <li sec:authentication="principal.accountNonExpired"></li>
+    <li sec:authentication="principal.accountNonLocked"></li>
+    <li sec:authentication="principal.credentialsNonExpired"></li>
+  </ul>
+  <br>
+  <hr>
+  <h3><a th:href="@{/logout}">注销登录</a></h3>
+
+</div>
+
+
+</body>
+</html>
