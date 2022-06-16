@@ -52,7 +52,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     Map<String,Object> map = new HashMap<>();
                     map.put("msg","注销登录成功");
                     map.put("用户信息",authentication.getPrincipal());
-                    resp.setContentType(MediaType.APPLICATION_JSON_VALUE);
+                    resp.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
                     resp.setStatus(HttpStatus.OK.value());
                     String s = new ObjectMapper().writeValueAsString(map);
                     resp.getWriter().write(s);

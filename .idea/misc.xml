@@ -15,6 +15,11 @@
         <option value="$PROJECT_DIR$/SpringSecurity-08-RememberMe-Separate/pom.xml" />
         <option value="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF/pom.xml" />
         <option value="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF-Attack/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-08-WebSeparate/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-WebSeparate/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-10-跨域/SpringMVC-CORS/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-10-跨域/SpringSecurity-CORS/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-11-Exception/pom.xml" />
       </list>
     </option>
   </component>

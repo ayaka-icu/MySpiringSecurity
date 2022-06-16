@@ -9,10 +9,15 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.authentication.RememberMeServices;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
 import javax.sql.DataSource;
+import java.rmi.server.UID;
+import java.util.UUID;
 
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -47,12 +52,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .rememberMe()
                 .rememberMeParameter("remember-me")
+                .rememberMeServices(rememberMeServices())
                 .tokenRepository(persistentTokenRepository())
                 .and()
                 .csrf().disable();
 
         //替换拦截
-        //http.addFilterAt(loginVerifyCodeFilter(), UsernamePasswordAuthenticationFilter.class);
+        http.addFilterAt(loginVerifyCodeFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 
 
@@ -72,6 +78,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         loginVerifyCodeFilter.setVerifyCodeParameter("verifyCode");
         //指定 认证匹配器
         loginVerifyCodeFilter.setAuthenticationManager(authenticationManagerBean());
+        //rememberMe
+        loginVerifyCodeFilter.setRememberMeServices(rememberMeServices());
         //认证成功后的处理
         loginVerifyCodeFilter.setAuthenticationSuccessHandler((req,resp,authentication)->{
             resp.sendRedirect("/index");
@@ -83,6 +91,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         //交给工厂
         return loginVerifyCodeFilter;
+    }
+
+    @Bean
+    public RememberMeServices rememberMeServices(){
+        PersistentTokenBasedRememberMeServices rememberMeServices
+                = new PersistentTokenBasedRememberMeServices
+                (UUID.randomUUID().toString(),userDetailsService,persistentTokenRepository());
+        return rememberMeServices;
     }
 
 

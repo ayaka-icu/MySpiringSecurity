@@ -77,7 +77,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/login")  // 注销认证后 要跳转的页面
                 .logoutSuccessHandler(new MyLogoutSuccessHandler()) //解决前后端分离方案
                 .and()
-                .csrf().disable() //TODO: 这里关闭了跨域问题 以后学
+                .csrf().disable() //TODO: 这里关闭了csrf问题 以后学
                 ;
     }
 
