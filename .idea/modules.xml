@@ -18,11 +18,12 @@
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-10-跨域/SpringSecurity-10-跨域.iml" filepath="$PROJECT_DIR$/SpringSecurity-10-跨域/SpringSecurity-10-跨域.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-11-Exception/SpringSecurity-11-Exception.iml" filepath="$PROJECT_DIR$/SpringSecurity-11-Exception/SpringSecurity-11-Exception.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-12-授权.iml" filepath="$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-12-授权.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-20-综合案例.iml" filepath="$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-20-综合案例.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-10-跨域/SpringSecurity-CORS/SpringSecurity-CORS.iml" filepath="$PROJECT_DIR$/SpringSecurity-10-跨域/SpringSecurity-CORS/SpringSecurity-CORS.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF/SpringSecurity-CSRF.iml" filepath="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF/SpringSecurity-CSRF.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF-Attack/SpringSecurity-CSRF-Attack.iml" filepath="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF-Attack/SpringSecurity-CSRF-Attack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-Web/SpringSecurity-Web.iml" filepath="$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-Web/SpringSecurity-Web.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-WebSeparate/SpringSecurity-WebSeparate.iml" filepath="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-WebSeparate/SpringSecurity-WebSeparate.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-Web/SpringSerucity-Web.iml" filepath="$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-Web/SpringSerucity-Web.iml" />
     </modules>
   </component>
 </project>

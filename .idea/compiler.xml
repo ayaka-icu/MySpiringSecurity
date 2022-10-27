@@ -9,11 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SpringSecurity-06-PasswordEncode" />
         <module name="SpringSecurity-07-RememberMe" />
-        <module name="SpringSerucity-Web" />
         <module name="SpringSecurity-08-RememberMe-Separate" />
         <module name="SpringSecurity-05-FrontEndSeparation" />
         <module name="SpringSecurity-02-Based-Method" />
         <module name="SpringSecurity-CSRF-Attack" />
+        <module name="SpringSecurity-Web" />
         <module name="SpringMVC-CORS" />
         <module name="SpringSecurity-CORS" />
         <module name="SpringSecurity-03-DataSource" />
@@ -28,6 +28,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SpringMVC-CORS" target="11" />
+      <module name="SpringSecrucity-Web" target="11" />
       <module name="SpringSecurity-01-Based-Url" target="11" />
       <module name="SpringSecurity-01-Start" target="11" />
       <module name="SpringSecurity-02-Based-Method" target="11" />
@@ -54,6 +55,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SpringMVC-CORS" options="-parameters" />
+      <module name="SpringSecrucity-Web" options="-parameters" />
       <module name="SpringSecurity-01-Based-Url" options="-parameters" />
       <module name="SpringSecurity-01-Start" options="-parameters" />
       <module name="SpringSecurity-02-Based-Method" options="-parameters" />
