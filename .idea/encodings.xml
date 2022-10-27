@@ -16,11 +16,22 @@
     <file url="file://$PROJECT_DIR$/SpringSecurity-08-RememberMe-Separate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringSecurity-08-RememberMe-Separate/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF-Attack/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF-Attack/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-WebSeparate/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-WebSeparate/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringSecurity-10-跨域/SpringMVC-CORS/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-10-跨域/SpringMVC-CORS/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringSecurity-10-跨域/SpringSecurity-CORS/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-10-跨域/SpringSecurity-CORS/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SpringSecurity-11-Exception/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-11-Exception/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-01-Based-Url/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-01-Based-Url/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-02-Based-Method/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-02-Based-Method/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-Web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-Web/src/main/resources" charset="UTF-8" />
   </component>
 </project>

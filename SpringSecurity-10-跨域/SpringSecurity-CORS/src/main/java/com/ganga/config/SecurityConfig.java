@@ -24,7 +24,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .configurationSource(configurationSource())
                 .and()
                 .csrf().disable();
+
     }
+
+
     CorsConfigurationSource configurationSource(){
 
         CorsConfiguration corsConfiguration = new CorsConfiguration();

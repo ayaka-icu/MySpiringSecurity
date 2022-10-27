@@ -28,7 +28,8 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * Spring Security 相关配置
+ * Spring Security 相关配置 <br>
+ * 前后端分离解决方案
  */
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -45,7 +46,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         this.userDetailService = userDetailService;
         this.dataSource = dataSource;
     }
-
 
     /**
      * 配置 认证规则 和 自定义登录界面
@@ -75,8 +75,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .logout() //开启csrf后 这样才有用！！！！
                 .logoutRequestMatcher(new OrRequestMatcher( //Or/And... 多个验证 or任意一个即可 and都满足  此外可以解决请求方式
-                        new AntPathRequestMatcher("/aa","GET"), //get方式
-                        new AntPathRequestMatcher("/logout","POST") //post
+                        new AntPathRequestMatcher("/aa", "GET"), //get方式
+                        new AntPathRequestMatcher("/logout", "POST") //post
                 ))
                 .logoutSuccessHandler((req, resp, authentication) -> {
                     Map<String, Object> map = new HashMap<>();
@@ -141,6 +141,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * 自定义RememberMeServices 交给工厂管理
+     *
      * @return
      */
     @Bean
@@ -153,10 +154,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * 数据库持久化令牌
+     *
      * @return
      */
     @Bean
-    public PersistentTokenRepository persistentTokenRepository(){
+    public PersistentTokenRepository persistentTokenRepository() {
         JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
         jdbcTokenRepository.setCreateTableOnStartup(false);
         jdbcTokenRepository.setDataSource(dataSource);

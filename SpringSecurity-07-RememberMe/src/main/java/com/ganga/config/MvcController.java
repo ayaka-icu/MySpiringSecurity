@@ -12,4 +12,5 @@ public class MvcController implements WebMvcConfigurer {
         registry.addViewController("/index").setViewName("index");
     }
 
+
 }

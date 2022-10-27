@@ -11,7 +11,9 @@
         <module name="SpringSecurity-07-RememberMe" />
         <module name="SpringSecurity-08-RememberMe-Separate" />
         <module name="SpringSecurity-05-FrontEndSeparation" />
+        <module name="SpringSecurity-02-Based-Method" />
         <module name="SpringSecurity-CSRF-Attack" />
+        <module name="SpringSecurity-Web" />
         <module name="SpringMVC-CORS" />
         <module name="SpringSecurity-CORS" />
         <module name="SpringSecurity-03-DataSource" />
@@ -20,12 +22,15 @@
         <module name="SpringSecurity-11-Exception" />
         <module name="SpringSecurity-CSRF" />
         <module name="SpringSecurity-02-Login" />
+        <module name="SpringSecurity-01-Based-Url" />
         <module name="SpringSecurity-04-TraditionalWeb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SpringMVC-CORS" target="11" />
+      <module name="SpringSecurity-01-Based-Url" target="11" />
       <module name="SpringSecurity-01-Start" target="11" />
+      <module name="SpringSecurity-02-Based-Method" target="11" />
       <module name="SpringSecurity-02-Login" target="11" />
       <module name="SpringSecurity-02-Login-Token" target="11" />
       <module name="SpringSecurity-03-DataSource" target="11" />
@@ -41,13 +46,16 @@
       <module name="SpringSecurity-CSRF" target="11" />
       <module name="SpringSecurity-CSRF-Attack" target="11" />
       <module name="SpringSecurity-TODO" target="11" />
+      <module name="SpringSecurity-Web" target="11" />
       <module name="SpringSecurity-WebSeparate" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SpringMVC-CORS" options="-parameters" />
+      <module name="SpringSecurity-01-Based-Url" options="-parameters" />
       <module name="SpringSecurity-01-Start" options="-parameters" />
+      <module name="SpringSecurity-02-Based-Method" options="-parameters" />
       <module name="SpringSecurity-02-Login" options="-parameters" />
       <module name="SpringSecurity-02-Login-Token" options="-parameters" />
       <module name="SpringSecurity-03-DataSource" options="-parameters" />
@@ -62,6 +70,7 @@
       <module name="SpringSecurity-CSRF" options="-parameters" />
       <module name="SpringSecurity-CSRF-Attack" options="-parameters" />
       <module name="SpringSecurity-TODO" options="-parameters" />
+      <module name="SpringSecurity-Web" options="-parameters" />
       <module name="SpringSecurity-WebSeparate" options="-parameters" />
     </option>
   </component>

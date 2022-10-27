@@ -20,6 +20,10 @@
         <option value="$PROJECT_DIR$/SpringSecurity-10-跨域/SpringMVC-CORS/pom.xml" />
         <option value="$PROJECT_DIR$/SpringSecurity-10-跨域/SpringSecurity-CORS/pom.xml" />
         <option value="$PROJECT_DIR$/SpringSecurity-11-Exception/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-01-Based-Url/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-02-Based-Method/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSerucity-Web/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-Web/pom.xml" />
       </list>
     </option>
   </component>

@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MySpringSecurity.iml" filepath="$PROJECT_DIR$/MySpringSecurity.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-10-跨域/SpringMVC-CORS/SpringMVC-CORS.iml" filepath="$PROJECT_DIR$/SpringSecurity-10-跨域/SpringMVC-CORS/SpringMVC-CORS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-01-Based-Url/SpringSecurity-01-Based-Url.iml" filepath="$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-01-Based-Url/SpringSecurity-01-Based-Url.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-01-Start/SpringSecurity-01-Start.iml" filepath="$PROJECT_DIR$/SpringSecurity-01-Start/SpringSecurity-01-Start.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-02-Based-Method/SpringSecurity-02-Based-Method.iml" filepath="$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-02-Based-Method/SpringSecurity-02-Based-Method.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-02-Login/SpringSecurity-02-Login.iml" filepath="$PROJECT_DIR$/SpringSecurity-02-Login/SpringSecurity-02-Login.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-03-DataSource/SpringSecurity-03-DataSource.iml" filepath="$PROJECT_DIR$/SpringSecurity-03-DataSource/SpringSecurity-03-DataSource.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-04-TraditionalWeb/SpringSecurity-04-TraditionalWeb.iml" filepath="$PROJECT_DIR$/SpringSecurity-04-TraditionalWeb/SpringSecurity-04-TraditionalWeb.iml" />
@@ -16,9 +18,11 @@
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-10-跨域/SpringSecurity-10-跨域.iml" filepath="$PROJECT_DIR$/SpringSecurity-10-跨域/SpringSecurity-10-跨域.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-11-Exception/SpringSecurity-11-Exception.iml" filepath="$PROJECT_DIR$/SpringSecurity-11-Exception/SpringSecurity-11-Exception.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-12-授权.iml" filepath="$PROJECT_DIR$/SpringSecurity-12-授权/SpringSecurity-12-授权.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-20-综合案例.iml" filepath="$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-20-综合案例.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-10-跨域/SpringSecurity-CORS/SpringSecurity-CORS.iml" filepath="$PROJECT_DIR$/SpringSecurity-10-跨域/SpringSecurity-CORS/SpringSecurity-CORS.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF/SpringSecurity-CSRF.iml" filepath="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF/SpringSecurity-CSRF.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF-Attack/SpringSecurity-CSRF-Attack.iml" filepath="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-CSRF-Attack/SpringSecurity-CSRF-Attack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-Web/SpringSecurity-Web.iml" filepath="$PROJECT_DIR$/SpringSecurity-20-综合案例/SpringSecurity-Web/SpringSecurity-Web.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-WebSeparate/SpringSecurity-WebSeparate.iml" filepath="$PROJECT_DIR$/SpringSecurity-09-CSRF-Mock/SpringSecurity-WebSeparate/SpringSecurity-WebSeparate.iml" />
     </modules>
   </component>
